@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style-type: none;
+}
+body{
+    width: 100%;
+    max-width: 1440px;
+    margin: auto;
+}
+.header{
+    width: 1440px;
+    height: 236px;
+    margin: 12px auto 71px auto;
+    box-shadow: 0px 4px 48px rgba(0, 0, 0, 0.16);
+}
+.header-contacts{
+    background-color: #FED600;
+}
+.header-contacts, .header-contacts ul{
+    display: flex;
+}
+.header-contacts__link{
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 18px;
+    text-align: right;
+    color: #000000;
+}
+.header-contacts__item:nth-child(6)::before{
+    background-image: url(img/tg-icon.svg);
+    display: block;
+}
+.header-contacts__item:nth-child(7)::before{
+    background-image: url(img/skype-icon.svg);
+    display: block;
+}
+.header-contacts__item:nth-child(8)::before{
+    background-image: url(img/phone-icon.svg);
+    display: block;
+}
+
+.header-menu{
+    display: flex;
+}
+
+.header-menu__logo p{
+    font-family: Open Sans;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    color: #000000;
+}
+.header-menu__logo span{
+    color: #ff0000;
+}
+
+
+.company-info{
+    width: 1235px;
+}
+
+.company-info__image{
+    background-image: url(img/team-img.png);
+    width: 1228px;
+    height: 431px;
+    display: block;
+}
+
+
+.video{
+    width: 1448px;
+    height: 550px;
+    left: 46px;
+    top: 1272px;
+    background: #F9F9F9;
+}
