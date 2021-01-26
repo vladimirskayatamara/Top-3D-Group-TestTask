@@ -16,18 +16,20 @@ body{
 }
 .header{
     width: 1440px;
-    height: 236px;
+    height: 230px;
     margin: 12px auto 71px auto;
     box-shadow: 0px 4px 48px rgba(0, 0, 0, 0.16);
+}
+.header-contacts, .header-contacts ul{
+    display: flex;
 }
 .header-contacts{
     background-color: #FED600;
     padding-right: 120px;
     padding-left: 120px;
+    justify-content: space-between;
 }
-.header-contacts, .header-contacts ul{
-    display: flex;
-}
+
 .header-contacts__link{
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
@@ -69,17 +71,31 @@ body{
     display: flex;
     padding-right: 120px;
     padding-left: 120px;
+    max-width: 1440px;
+    height: 81px;
+    margin-top: 16px;
+    align-items: center;
+    justify-content: space-around;
 }
 
-.header-menu__logo p{
-    font-family: Open Sans;
+.header-menu__logo{
+    width: 213px;
+    height: 62px;
+    display: flex;
+    align-items: center;
+}
+.header-menu__text{
+    font-family: 'Open Sans', sans-serif;
     font-style: italic;
     font-weight: normal;
     font-size: 13px;
     line-height: 18px;
+    width: 133px;
+    height: 36px;
     display: flex;
     align-items: center;
     color: #000000;
+    margin-left: 16px;
 }
 .header-menu__logo span{
     color: #ff0000;
@@ -145,9 +161,98 @@ form.search-box{
       line-height: 18px;
     }
   .header-navbar{
-    padding-right: 120px;
-    padding-left: 120px;
+    padding: 13px 124px 22px 124px;
+    height: 53px;
   }
+  .login-button{
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 18px;
+    color: #222222;
+    margin-right: 32px;
+    margin-left: 30px;
+    margin-bottom: 7px;
+  }
+  .login-button::before{
+      content:url(img/quit-icon.svg);
+      position: relative;
+      top: 7px;
+      right: 12.33%;
+  }
+  .basket-button{
+    width: 160px;
+    height: 36px;
+    background-color: #D2001C;
+    border-radius: 4px;
+    border: none;
+    color: #ffffff;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 18px;
+    text-align: center;
+  }
+  .basket-button span{
+      vertical-align: middle;
+  }
+  .basket-button span::before{
+    content: url(img/backet-icon.svg);
+    position: relative;
+    top: 5px;
+    right: 4.33%;
+  }
+
+
+.header-menu-shop{
+    height: 61px;
+    border-top: 1px solid #BDBDBD;
+    padding: 12px 124px;
+    display: flex;
+    align-items: center;
+}
+  #menu-toggle{
+      display: none;
+  }
+  .hamburger-menu__box, .hamburger-menu__shop-box{
+      display: flex;
+  }
+  .hamburger-menu__box .hamburger-menu__item{    
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 18px;
+    color: #000000;
+    margin-right: 64px;
+  }
+     .hamburger-menu__item:not(:last-child){
+      margin-right: 0;
+  }
+  .hamburger-menu__shop-box .hamburger-menu__product-item{
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 18px;
+    color: #000000; 
+    margin-right: 20px;
+  }
+  .hamburger-menu__product-item::after{
+    content: url(img/menu-arrow.svg);
+    display: inline-block;
+    margin-left: 5px;
+    margin-right: 0; 
+}
+.hamburger-menu__shop-box li:last-child{
+    margin-right: 0;
+}
+   
+
+
+
 
 .company-info{
     width: 1235px;
@@ -158,6 +263,7 @@ form.search-box{
     width: 1228px;
     height: 431px;
     display: block;
+    margin-bottom: 50px;
 }
 
 

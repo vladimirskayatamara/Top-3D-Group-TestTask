@@ -35,7 +35,11 @@
        <div class="header-menu"> <!--в нашем случае, это вся строка с лого, полем ввода и проч.-->
            <div class="header-menu__logo">
                <img width="64" height="73" alt="logo-img" src="img/logo.svg">
-               <p>Ваш эксперт на рынке <span>3D</span>-техники</p>
+               <p class="header-menu__text">Ваш эксперт на рынке 3D-техники</p>
+           </div>
+
+           <div class="yandex-market">
+               <a href="https://market.yandex.ru/shop--top-3d-shop-vash-ekspert-na-rynke-3d-tekhniki/239950/reviews" target="_blank"><img alt="Yandex Market Link" width="105" height="60" src="img/yandex-market-rw.png"></a>
            </div>
 
            <form class="search-box">
@@ -43,34 +47,50 @@
             <button type="submit">Найти</button>
           </form>
         
-          <a>Войти</a>
+          <a class="login-button">Войти</a>
 
-          <button>Корзина пуста</button>
+          <a class="basket-button"><span>Корзина пуста</span></a>
        </div>
 
        <div class="header-navbar"> <!--а здесь у нас будет меню, которое можнно будет сворачивать по клику-->
-        <div class="hamburger-menu">
-            <input id="menu-toggle" type="checkbox"/>
-            <label class="hamburger-menu__btn" for="menu-toggle">
-                <span></span>
-            </label>
-        
-            <ul class="hamburger-menu__box">
-                <li><a href="#" class="menu-item">Акции</a></li>
-                <li><a href="#" class="menu-item">О нас</a></li>
-                <li><a href="#" class="menu-item">Мероприятия</a></li>
-                <li><a href="#" class="menu-item">Оплата и доставка</a></li>
-                <li><a href="#" class="menu-item">Что с моим заказом?</a></li>
-                <li><a href="#" class="menu-item">Гос.закупки</a></li>
-                <li><a href="#" class="menu-item">Блог</a></li>
-                <li><a href="#" class="menu-item">Мастер-классы</a></li>
-                <li><a href="#" class="menu-item">Контакты</a></li>
+            <div class="hamburger-menu">
+                <input id="menu-toggle" type="checkbox"/>
+                <label class="hamburger-menu__btn" for="menu-toggle">
+                    <span></span>
+                </label>
+            
+                <ul class="hamburger-menu__box">
+                    <li><a href="#" class="hamburger-menu__item">Акции</a></li>
+                    <li><a href="#" class="hamburger-menu__item">О нас</a></li>
+                    <li><a href="#" class="hamburger-menu__item">Мероприятия</a></li>
+                    <li><a href="#" class="hamburger-menu__item">Оплата и доставка</a></li>
+                    <li><a href="#" class="hamburger-menu__item">Что с моим заказом?</a></li>
+                    <li><a href="#" class="hamburger-menu__item">Гос.закупки</a></li>
+                    <li><a href="#" class="hamburger-menu__item">Блог</a></li>
+                    <li><a href="#" class="hamburger-menu__item">Мастер-классы</a></li>
+                    <li><a href="#" class="hamburger-menu__item">Контакты</a></li>
+                </ul> 
+            </div>
+        </div>    
+
+        <div class="header-menu-shop">
+            <ul class="hamburger-menu__shop-box">
+                <li><a href="#" class="hamburger-menu__product-item">3D-принтеры</a></li>
+                <li><a href="#" class="hamburger-menu__product-item">3D-сканеры</a></li>
+                <li><a href="#" class="hamburger-menu__product-item">Станки</a></li>
+                <li><a href="#" class="hamburger-menu__product-item">Рoботы</a></li>
+                <li><a href="#" class="hamburger-menu__product-item">Образование</a></li>
+                <li><a href="#" class="hamburger-menu__product-item">Стоматологам</a></li>
+                <li><a href="#" class="hamburger-menu__product-item">Гаджеты</a></li>
+                <li><a href="#" class="hamburger-menu__product-item">Материалы</a></li>
+                <li><a href="#" class="hamburger-menu__product-item">ПО</a></li>
+                <li><a href="#" class="hamburger-menu__product-item">Решения</a></li>
+                <li><a href="#" class="hamburger-menu__product-item">Учебный центр</a></li>
+                <li><a href="#" class="hamburger-menu__product-item">Услуги</a></li>
             </ul>
+        </div>  
 
-        
-        </div>
-
-       </div>
+       
 
     </header>
 
