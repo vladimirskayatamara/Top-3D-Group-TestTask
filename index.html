@@ -16,7 +16,8 @@
     <header class="header">
        <div class="header-contacts">
            <ul>
-                <li class="header-contacts__item"><a class="header-contacts__link" href="#">Санкт-Петербург</li></a>
+                <li class="header-contacts__item"><a class="header-contacts__link" href="#" id="city-selector-spb">Санкт-Петербург</li></a>
+                <li class="header-contacts__item"><a class="header-contacts__link" href="#" id="city-selector-msk">Москва</li></a>
                 <li class="header-contacts__item"><a class="header-contacts__link"href="tel:+78126135838">+7 (812) 613-58-38</li></a>
                 <li class="header-contacts__item"><a class="header-contacts__link" href="#">Пн–пт 10:00–19:00, сб-вс 10:00–17:00</li></a>
            </ul>
@@ -37,9 +38,9 @@
                <p>Ваш эксперт на рынке <span>3D</span>-техники</p>
            </div>
 
-           <form action="" method="get">
-            <input name="s" placeholder="Введите запрос, например, Formlabs Form 2" type="search">
-            <button type="submit">Поиск</button>
+           <form class="search-box">
+            <input type="text" placeholder="Введите запрос, например, Formlabs Form 2" required>
+            <button type="submit">Найти</button>
           </form>
         
           <a>Войти</a>
@@ -101,7 +102,5 @@
         </div>
 
     </main>
-
-
 </body>
 </html>
