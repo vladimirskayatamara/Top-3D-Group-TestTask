@@ -3,6 +3,18 @@
     padding: 0;
     box-sizing: border-box;
 }
+@font-face{
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 400;
+    src: url(fonts/SFProDisplay-Regular.woff);
+}
+@font-face{
+    font-family: "SF Pro Text";
+    font-style: normal;
+    font-weight: 400;
+    src: url(fonts/SFProDisplay-Regular.woff);
+}
 a{
     text-decoration: none;
 }
@@ -161,8 +173,9 @@ form.search-box{
       line-height: 18px;
     }
   .header-navbar{
-    padding: 13px 124px 22px 124px;
+    padding: 13px 70px 22px 70px;
     height: 53px;
+    justify-content: center;
   }
   .login-button{
     font-family: 'Open Sans', sans-serif;
@@ -212,6 +225,7 @@ form.search-box{
     padding: 12px 124px;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
   #menu-toggle{
       display: none;
@@ -228,7 +242,7 @@ form.search-box{
     color: #000000;
     margin-right: 64px;
   }
-     .hamburger-menu__item:not(:last-child){
+     .hamburger-menu__item:not:last-child{
       margin-right: 0;
   }
   .hamburger-menu__shop-box .hamburger-menu__product-item{
@@ -236,9 +250,9 @@ form.search-box{
     font-style: normal;
     font-weight: bold;
     font-size: 13px;
-    line-height: 18px;
+    line-height: 18px; 
     color: #000000; 
-    margin-right: 20px;
+    margin-right: 13px;
   }
   .hamburger-menu__product-item::after{
     content: url(img/menu-arrow.svg);
@@ -246,7 +260,7 @@ form.search-box{
     margin-left: 5px;
     margin-right: 0; 
 }
-.hamburger-menu__shop-box li:last-child{
+.hamburger-menu__box a:nth-child(9){
     margin-right: 0;
 }
    
@@ -256,6 +270,9 @@ form.search-box{
 
 .company-info{
     width: 1235px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .company-info__image{
@@ -264,6 +281,84 @@ form.search-box{
     height: 431px;
     display: block;
     margin-bottom: 50px;
+}
+.company-info__recruitment{
+    width: 333px;
+}
+.company-info__recruitment h1{
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 27px;
+    line-height: 32px;
+    color: #000000;
+    margin-bottom: 40px;
+}
+.company-info__recruitment button{
+    background-color: #D2001C;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    width: 280px;
+    height: 44px;
+    font-family: "SF Pro Text";
+    color: #ffffff;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.company-info__recruitment span{
+    font-family: "SF Pro Text";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.7px;
+    color: #C4C4C4;
+}
+.company-info__text{
+    font-family: "SF Pro Text";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: justify;
+    letter-spacing: -0.7px;
+    color: #4D4D4D;
+    width: 708px;
+}
+.company-links{
+    margin: 70px 0;
+}
+.company-links h2{
+    font-family: "SF Pro Text";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: -0.7px;
+    color: #222222;
+    margin-bottom: 50px;
+}
+.company-links__item{
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    text-decoration-line: underline;
+    color: #4D4D4D;
+}
+.company-links__item:hover{
+    color: #D2001C;
+}
+.company-links__item:hover > svg*{
+    fill: #D2001C;
+    stroke: #D2001C;
 }
 
 

@@ -99,6 +99,7 @@
         <div class="company-info">
 
             <div class="company-info__image"></div>
+            
             <div class="company-info__recruitment">
                 <h1>Твоя работа в крупнейшем интеграторе цифрового производства</h1>
                 <button>Отправить резюме</button>
@@ -112,7 +113,21 @@
             </div>
         </div>
         
-
+        <div class="company-links">
+            <h2>Лучше один раз увидеть:</h2>
+            <a class="company-links__item">Как устроена наша компания изнутри</a>
+            <svg class="company-links__arrow" xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10" fill="none">
+                <path d="M0.999999 9L5 5L1 1" stroke="#4D4D4D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            <a class="company-links__item">Как создавалась компания - необычная история</a>
+            <svg class="company-links__arrow" xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10" fill="none">
+                <path d="M0.999999 9L5 5L1 1" stroke="#4D4D4D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            <a class="company-links__item">Читай о нас на 3D Today</a>
+            <svg class="company-links__arrow" xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10" fill="none">
+                <path d="M0.999999 9L5 5L1 1" stroke="#4D4D4D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+        </div>
         <div class="video">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/OYFOWAL1NlA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/SOYBsly_yN8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -122,5 +137,21 @@
         </div>
 
     </main>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js">
+$('a').on('mouseover', function() {
+  $(this).find('svg').parent().css({
+    'fill': '#D2001C;',
+    'stroke': '#D2001C;'
+  });
+});
+
+$('a').on('mouseleave', function() {
+  $(this).find('svg').parent().css({
+    'fill': 'black',
+    'stroke': 'black'
+  });
+});
+</script>
 </body>
+
 </html>
