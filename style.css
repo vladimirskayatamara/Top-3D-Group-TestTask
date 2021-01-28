@@ -417,10 +417,10 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
 
 
 .video{
-    width: 1448px;
+    width: 1440px;
     height: 550px;
     background-color: #F9F9F9;
-    padding: 70px 137px 64px;
+    padding: 70px 100px 64px;
     margin-bottom: 5%;
 }
 .video__row, .video__row2{
@@ -436,24 +436,32 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
     line-height: 43px;
     text-align: center;
     color: #222222;
-    margin-bottom: 54px;
+    display: inline-block;
 }
 .slider__control{
     display: inline-flex;
 }
+.video-controls{
+    display: inline-flex;
+    margin-right: 50px;
+    
+}
 .slider {
     position: relative;
     overflow: hidden;
-    
+  }
+  .slider__row1{
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 54px;
   }
 
   .slider__wrapper {
     display: flex;
     transition: transform 0.6s ease;
-    width: 1448px;
-    height: 550px;
+    width: 1440px;
+    height: 315px;
     background-color: #F9F9F9;
-    padding: 70px 137px 64px;
     margin-bottom: 5%;
 
   }
@@ -461,6 +469,13 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
   .slider__item {
     flex: 0 0 50%;
     max-width: 45%;
+    width: 549px;
+    height: 315px;
+    
+  }
+  .slider__item iframe{
+    width: 549px;
+    height: 315px;
   }
   .slider__control{
     border: 1px solid #E5E5E5;
@@ -485,9 +500,30 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
     text-align: center;
   }
 
-/**адаптив для планшетов от 650 до 992 **/
-/**адаптив для мобильных и планшетов от 475 до 650 **/
 
+/**адаптив для десктопов маленьких от 992 до 1440 **/
+@media screen and (max-width: 475px){
+    body, .header, main, .company-info, .video{
+        width: 100%;
+        max-width: 992px;
+    }
+}
+/**адаптив для планшетов от 650 до 992 **/
+@media screen and (max-width: 475px){
+    body, .header, main, .company-info, .video{
+        width: 100%;
+        min-width: 650px;
+        max-width: 992px;
+    }
+}
+/**адаптив для мобильных и планшетов от 475 до 650 **/
+@media screen and (max-width: 475px){
+    body, .header, main, .company-info, .video{
+        width: 100%;
+        min-width: 475px;
+        max-width: 650px;
+    }
+}
 /**адаптив для мобильных от 320 до 475 **/
 @media screen and (max-width: 475px){
     body, .header, main, .company-info, .video{
