@@ -34,6 +34,7 @@ body{
 }
 .header-contacts, .header-contacts ul{
     display: flex;
+    margin-top: 3px;
 }
 .header-contacts{
     background-color: #FED600;
@@ -42,6 +43,9 @@ body{
     justify-content: space-between;
     height: 32px;
     align-items: center;
+}
+.header-contacts div{
+    display: flex;
 }
 
 .header-contacts__link, .header-contacts__link2{
@@ -60,6 +64,7 @@ body{
     background-color: transparent;
     border: none;
     outline: none;
+    margin-right: 10px;
 }
 .header-contacts__btn::after{
     content: url(img/arrow.svg);
@@ -125,6 +130,10 @@ body{
 }
 .header-menu__logo span{
     color: #ff0000;
+}
+.yandex-market img{
+    width: 100%;
+    height: auto;
 }
 form.search-box{
     width: 521px;
@@ -503,14 +512,14 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
 
 /**адаптив для десктопов маленьких от 992 до 1440 **/
 @media screen and (max-width: 475px){
-    body, .header, main, .company-info, .video{
+    body, .header, .main, .company-info, .video{
         width: 100%;
         max-width: 992px;
     }
 }
 /**адаптив для планшетов от 650 до 992 **/
 @media screen and (max-width: 475px){
-    body, .header, main, .company-info, .video{
+    body, .header, .main, .company-info, .video{
         width: 100%;
         min-width: 650px;
         max-width: 992px;
@@ -518,7 +527,7 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
 }
 /**адаптив для мобильных и планшетов от 475 до 650 **/
 @media screen and (max-width: 475px){
-    body, .header, main, .company-info, .video{
+    body, .header, .main, .company-info, .video{
         width: 100%;
         min-width: 475px;
         max-width: 650px;
@@ -526,7 +535,7 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
 }
 /**адаптив для мобильных от 320 до 475 **/
 @media screen and (max-width: 475px){
-    body, .header, main, .company-info, .video{
+    body, .header, .main, .company-info, .video{
         width: 100%;
         min-width: 320px;
         max-width: 475px;
@@ -597,32 +606,30 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
     }
     .video{
         padding: 5px;
+        height: auto;
     }
-    .video__row2{
-        flex-direction: column;
-        align-items: center;
-    }
-    .video__row2 iframe{
-        width: 280px;
-        height: 161px;
-        margin-top: 5px;
-    }
+    
    
     .slider__wrapper {
         width: 280px;
-        height: 161px;
-        margin-bottom: 5%;
-      }
-      .slider__item{
-          max-width: 100%;
-          width: 280px;
-          height: 161px;
-          margin-right: 5%;
-      }
-      .slider__item iframe{
+        height: auto;
+        margin-right: auto;
+        margin-left: auto;
+        flex-direction: column;
+    }
+    .slider__item{
+        max-width: 100%;
         width: 280px;
         height: 161px;
-      }
+        margin-right: 5%;
+    }
+    .slider__item iframe{
+        width: 280px;
+        height: 161px;
+    }
+    .video-controls{
+        display: none;
+    }
       
 
 
@@ -662,7 +669,7 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
         height: 26px;
         cursor: pointer;
         z-index: 4;
-        top: 25px;
+        top: 24px;
         right: 9em;
       }
       .hamburger-menu__btn > span,
