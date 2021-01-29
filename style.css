@@ -650,7 +650,7 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
 }
     
 
-}
+
 /**адаптив для мобильных и планшетов от 475 до 650 
 @media screen and (max-width: 650px){
     body, .header, .main, .company-info, .video{
