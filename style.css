@@ -61,7 +61,7 @@ body{
     border: none;
     outline: none;
 }
-.header-contacts__link:first-child::after{
+.header-contacts__btn::after{
     content: url(img/arrow.svg);
     display: inline-block;
     margin-left: 5px;
@@ -494,7 +494,7 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
 .slider__control_right::before{
     content: url(img/controls-arrow-right.svg);
 }
-  .slider__item>div {
+.slider__item>div {
     line-height: 250px;
     font-size: 100px;
     text-align: center;
@@ -607,7 +607,23 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
         height: 161px;
         margin-top: 5px;
     }
-    
+   
+    .slider__wrapper {
+        width: 280px;
+        height: 161px;
+        margin-bottom: 5%;
+      }
+      .slider__item{
+          max-width: 100%;
+          width: 280px;
+          height: 161px;
+          margin-right: 5%;
+      }
+      .slider__item iframe{
+        width: 280px;
+        height: 161px;
+      }
+      
 
 
 
