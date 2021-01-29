@@ -535,6 +535,9 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
     .company-info__recruitment{
         width: 100%;
     }
+    .company-info__text{
+        width: 100%;
+    }
     .header-contacts, .header-contacts, .company-info,  .company-info__text p, .company-info__recruitment, .company-links, .video__row{
         padding: 10px;
     }
