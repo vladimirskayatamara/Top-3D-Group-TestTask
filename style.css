@@ -310,7 +310,7 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
 
 .company-info__image{
     width: 1228px;
-    height: 431px;
+    height: auto;
     margin-bottom: 50px;
 }
 .company-info__recruitment{
@@ -511,34 +511,29 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
 
 
 /**адаптив для десктопов маленьких от 992 до 1440 **/
-@media screen and (max-width: 475px){
+@media screen and (max-width: 1440px){
     body, .header, .main, .company-info, .video{
         width: 100%;
         max-width: 992px;
     }
+    .company-info__image img{
+        width: 100%;
+        height: auto;
+    }
 }
 /**адаптив для планшетов от 650 до 992 **/
-@media screen and (max-width: 475px){
+@media screen and (max-width: 992px){
     body, .header, .main, .company-info, .video{
         width: 100%;
         min-width: 650px;
         max-width: 992px;
     }
-}
-/**адаптив для мобильных и планшетов от 475 до 650 **/
-@media screen and (max-width: 475px){
-    body, .header, .main, .company-info, .video{
+    .company-info__image img{
         width: 100%;
-        min-width: 475px;
-        max-width: 650px;
+        height: auto;
     }
-}
-/**адаптив для мобильных от 320 до 475 **/
-@media screen and (max-width: 475px){
-    body, .header, .main, .company-info, .video{
+    .company-info__recruitment{
         width: 100%;
-        min-width: 320px;
-        max-width: 475px;
     }
     .header-contacts, .header-contacts, .company-info,  .company-info__text p, .company-info__recruitment, .company-links, .video__row{
         padding: 10px;
@@ -572,7 +567,151 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
         width: 200px;
     }
     
+    .hamburger-menu{
+        visibility: visible;
+      }
+      #menu-toggle {
+        opacity: 0;
+      }
+      #menu-toggle:checked ~ .hamburger-menu__btn > span {
+        transform: rotate(45deg); 
+      }
+      #menu-toggle:checked ~ .hamburger-menu__btn > span::before {
+        top: 0;
+        transform: rotate(0);
+      }
+      #menu-toggle:checked ~ .hamburger-menu__btn > span::after {
+        top: 0;
+        transform: rotate(90deg);
+      }
+      #menu-toggle:checked ~ .hamburger-menu__box {
+        visibility: visible;
+        left: 0;
+      }
+      #menu-toggle:checked ~ .hamburger-menu__btn{
+        left: 0;
+        position: fixed;
+        margin-left: 15px;
+      }
+      .hamburger-menu__btn {
+        display: flex;
+        position: absolute;
+        width: 30px;
+        height: 26px;
+        cursor: pointer;
+        z-index: 4;
+        top: 24px;
+        margin-left: 145px;
+      }
+      .hamburger-menu__btn > span,
+      .hamburger-menu__btn > span::after {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        border-radius: 10px;
+        background-color: #4D4D4D;
+        transition-duration: .25s;
+      }
+      .hamburger-menu__btn > span::before {
+        content: '';
+        top: -8px;
+      }
 
+      .hamburger-menu__btn > span::after {
+        content: '';
+        top: 8px;
+      }
+      .hamburger-menu__box {
+        display: block;
+        position: fixed;
+        visibility: hidden;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        margin: 0;
+        padding: 80px 0;
+        list-style: none;
+        background-color: #ffffff;
+        transition-duration: .25s;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+        z-index: 3;
+        height: auto;
+      }
+      .hamburger-menu__box li{
+        margin-left: 1em;
+        margin-bottom: 2em;
+      }
+      .hamburger-menu__item {
+        color: #4D4D4D;
+        font-size: 16px;
+      }
+      .hamburger-menu__item:hover{
+        text-decoration: underline;
+        color: #D2001C;
+      }
+      .company-links h2::after{
+          display: none;
+      }
+}
+    
+
+}
+/**адаптив для мобильных и планшетов от 475 до 650 
+@media screen and (max-width: 650px){
+    body, .header, .main, .company-info, .video{
+        width: 100%;
+        min-width: 475px;
+        max-width: 650px;
+    }
+    .company-info__image, .company-info__image img{
+        width: 100%;
+        height: auto;
+    }
+    .company-info__image{
+        margin-bottom: 30px;
+    }
+}**/
+/**адаптив для мобильных от 320 до 475 **/
+@media screen and (max-width: 650px){
+    body, .header, .main, .company-info, .video{
+        width: 100%;
+        min-width: 320px;
+        max-width: 475px;
+    }/**
+    .header-contacts, .header-contacts, .company-info,  .company-info__text p, .company-info__recruitment, .company-links, .video__row{
+        padding: 10px;
+    }
+    .header{
+        margin-bottom: 1em;
+    }
+    .header-menu-shop, .login-button, .basket-button{
+        display: none;
+    }
+    
+    .header-menu, .header-navbar{
+        flex-wrap: wrap;
+        padding: 5px;
+    }
+    .header-menu__text{
+        display: none;
+    }
+    .header-menu__logo{
+        width: 64px;
+    }
+    .header-contacts__item2:nth-child(-n+2), .header-contacts__item{
+        display: none;
+    }
+    form.search-box{
+        width: 285px;
+        margin-top: 15px;
+        margin-bottom: 8px;
+    } 
+    form.search-box input{
+        width: 200px;
+    }
+    
+**/
 
     .company-info__recruitment h1{
         font-size: 1.3rem;
@@ -670,7 +809,7 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
         cursor: pointer;
         z-index: 4;
         top: 24px;
-        right: 9em;
+        margin-left: 145px;
       }
       .hamburger-menu__btn > span,
       .hamburger-menu__btn > span::after {
@@ -718,5 +857,10 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
       .hamburger-menu__item:hover{
         text-decoration: underline;
         color: #D2001C;
+      }
+}
+@media screen and (max-width: 465px){
+    .hamburger-menu__btn {
+        right: 9em;
       }
 }
