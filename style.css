@@ -15,6 +15,12 @@
     font-weight: 400;
     src: url(fonts/SFProDisplay-Regular.woff);
 }
+@font-face{
+    font-family: "SF Pro Text";
+    font-weight: 500;
+    src: url(fonts/SFProDisplay-Medium.woff)
+}
+
 a{
     text-decoration: none;
 }
@@ -28,7 +34,7 @@ body{
 }
 .header{
     width: 1440px;
-    height: 230px;
+    height: 240px;
     margin: 12px auto 71px auto;
     box-shadow: 0px 4px 48px rgba(0, 0, 0, 0.16);
 }
@@ -64,7 +70,7 @@ body{
     background-color: transparent;
     border: none;
     outline: none;
-    margin-right: 10px;
+    margin-right: 25px;
 }
 .header-contacts__btn::after{
     content: url(img/arrow.svg);
@@ -128,16 +134,14 @@ body{
     color: #000000;
     margin-left: 16px;
 }
-.header-menu__logo span{
-    color: #ff0000;
-}
+
 .yandex-market img{
     width: 100%;
     height: auto;
 }
 form.search-box{
     width: 521px;
-    height: 44px;
+    height: 46px;
     background: #FFFFFF;
     border: 1px solid #BDBDBD;
     box-sizing: border-box;
@@ -207,7 +211,7 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
     height: 53px;
     justify-content: center;
   }
-  .login-button{
+  .login-button, .login-button-mobile{
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: 600;
@@ -218,13 +222,21 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
     margin-left: 30px;
     margin-bottom: 7px;
   }
-  .login-button::before{
+  .login-button-mobile{
+    margin-left: 0;
+  }
+  .login-button::before, .login-button-mobile::before{
       content:url(img/quit-icon.svg);
       position: relative;
       top: 7px;
-      right: 12.33%;
   }
-  .basket-button{
+  .login-button::before{
+      right: 12.33%;
+  }  
+  .login-button-mobile::before{
+      margin-right: 10px;
+  }
+  .basket-button, .basket-button-mobile{
     width: 160px;
     height: 36px;
     background-color: #D2001C;
@@ -237,11 +249,12 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
     font-size: 13px;
     line-height: 18px;
     text-align: center;
+    display: inline-block;
   }
-  .basket-button span{
+  .basket-button span, .basket-button-mobile span{
       vertical-align: middle;
   }
-  .basket-button span::before{
+  .basket-button span::before, .basket-button-mobile::before{
     content: url(img/backet-icon.svg);
     position: relative;
     top: 5px;
@@ -272,7 +285,10 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
     color: #000000;
     margin-right: 64px;
   }
-  .hamburger-menu__box li:last-of-type a{
+  .hamburger-menu__box li:nth-child(n+10){
+      display:none
+  }
+  .no-right-margin{
       margin-right: 0;
   }
   .hamburger-menu__shop-box .hamburger-menu__product-item{
@@ -317,7 +333,7 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
     width: 333px;
 }
 .company-info__recruitment h1{
-    font-family: SF Pro Display;
+    font-family: 'SF Pro Display';
     font-style: normal;
     font-weight: normal;
     font-size: 27px;
@@ -365,16 +381,17 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
     color: #C4C4C4;
 }
 .company-info__text{
-    font-family: "SF Pro Text";
+    font-family: SF Pro Text;
     font-style: normal;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 16.5px;
     line-height: 19px;
     text-align: justify;
     letter-spacing: -0.7px;
     color: #4D4D4D;
     width: 610px;
     padding: 5px;
+    width: 708px;
 }
 .company-info__text p{
     margin-bottom: 1em;
@@ -403,6 +420,9 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
 }
 .company-links h2::after{
     content: url(img/h-line.svg);
+    bottom: 287px;
+    position: absolute;
+    left: 34%;
 }
 .company-links__item{
     font-family: "SF Pro Display";
@@ -636,6 +656,9 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
         margin-left: 1em;
         margin-bottom: 2em;
       }
+      .hamburger-menu__box li:nth-child(n+10){
+        display:block;
+    }
       .hamburger-menu__item {
         color: #4D4D4D;
         font-size: 16px;
@@ -649,23 +672,6 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
       }
 }
     
-
-
-/**адаптив для мобильных и планшетов от 475 до 650 
-@media screen and (max-width: 650px){
-    body, .header, .main, .company-info, .video{
-        width: 100%;
-        min-width: 475px;
-        max-width: 650px;
-    }
-    .company-info__image, .company-info__image img{
-        width: 100%;
-        height: auto;
-    }
-    .company-info__image{
-        margin-bottom: 30px;
-    }
-}**/
 /**адаптив для мобильных от 320 до 475 **/
 @media screen and (max-width: 650px){
     body, .header, .main, .company-info, .video{
@@ -673,45 +679,9 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
         min-width: 465px;
         max-width: 650px;
     }
-    .header-navbar{
-        display: none;
-    }
-    
-    /**
-    .header-contacts, .header-contacts, .company-info,  .company-info__text p, .company-info__recruitment, .company-links, .video__row{
-        padding: 10px;
-    }
     .header{
-        margin-bottom: 1em;
+        height: 220px;
     }
-    .header-menu-shop, .login-button, .basket-button{
-        display: none;
-    }
-    
-    .header-menu, .header-navbar{
-        flex-wrap: wrap;
-        padding: 5px;
-    }
-    .header-menu__text{
-        display: none;
-    }
-    .header-menu__logo{
-        width: 64px;
-    }
-    .header-contacts__item2:nth-child(-n+2), .header-contacts__item{
-        display: none;
-    }
-    form.search-box{
-        width: 285px;
-        margin-top: 15px;
-        margin-bottom: 8px;
-    } 
-    form.search-box input{
-        width: 200px;
-    }
-    
-**/
-
     .company-info__recruitment h1{
         font-size: 1.3rem;
         margin-bottom: 1em;
@@ -723,128 +693,10 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
     .company-info__image{
         margin-bottom: 30px;
     }
-    
-
-    .hamburger-menu{
-        visibility: visible;
-      }
-      #menu-toggle {
-        opacity: 0;
-      }
-      #menu-toggle:checked ~ .hamburger-menu__btn > span {
-        transform: rotate(45deg); 
-      }
-      #menu-toggle:checked ~ .hamburger-menu__btn > span::before {
-        top: 0;
-        transform: rotate(0);
-      }
-      #menu-toggle:checked ~ .hamburger-menu__btn > span::after {
-        top: 0;
-        transform: rotate(90deg);
-      }
-      #menu-toggle:checked ~ .hamburger-menu__box {
-        visibility: visible;
-        left: 0;
-      }
-      #menu-toggle:checked ~ .hamburger-menu__btn{
-        left: 0;
-        position: fixed;
-        margin-left: 15px;
-      }
-      .hamburger-menu__btn {
-        display: flex;
-        position: absolute;
-        width: 30px;
-        height: 26px;
-        cursor: pointer;
-        z-index: 4;
-        top: 24px;
-        margin-left: 145px;
-      }
-      .hamburger-menu__btn > span,
-      .hamburger-menu__btn > span::after {
-        display: block;
-        position: absolute;
-        width: 100%;
-        height: 3px;
-        border-radius: 10px;
-        background-color: #4D4D4D;
-        transition-duration: .25s;
-      }
-      .hamburger-menu__btn > span::before {
-        content: '';
-        top: -8px;
-      }
-
-      .hamburger-menu__btn > span::after {
-        content: '';
-        top: 8px;
-      }
-      .hamburger-menu__box {
-        display: block;
-        position: fixed;
-        visibility: hidden;
-        top: 0;
-        left: -100%;
-        width: 100%;
-        margin: 0;
-        padding: 80px 0;
-        list-style: none;
-        background-color: #ffffff;
-        transition-duration: .25s;
-        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
-        z-index: 3;
-        height: auto;
-      }
-      .hamburger-menu__box li{
-        margin-left: 1em;
-        margin-bottom: 2em;
-      }
-      .hamburger-menu__item {
-        color: #4D4D4D;
-        font-size: 16px;
-      }
-      .hamburger-menu__item:hover{
-        text-decoration: underline;
-        color: #D2001C;
-      }
-}
-@media screen and (max-width: 465px){
-    body, .header, .main, .company-info, .video{
-        width: 100%;
-        min-width: 320px;
-        max-width: 465px;
-    }
-    .header{
-        height: 230px;
-    }
-    .hamburger-menu__btn {
-        right: 9em;
-    }
-      .video{
+    .video{
         padding: 5px;
         height: auto;
     }
-    .company-links{
-        margin-top: 30px;
-        margin-bottom: 30px;
-    }
-    .company-links h2{
-        margin-bottom: 1em;
-    }
-    .company-links h2::after{
-        display: none;
-    }
-    .company-links__block {
-        flex-direction: column;
-    }
-    .company-links__item{
-        margin-bottom: 1em;
-    }
-    .company-links__arrow {
-        margin-left: 2px;
-    }
-    
     .slider__wrapper {
         width: 280px;
         height: auto;
@@ -866,4 +718,39 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
         display: none;
     }
       
+    
+
+}
+@media screen and (max-width: 465px){
+    body, .header, .main, .company-info, .video{
+        width: 100%;
+        min-width: 320px;
+        max-width: 465px;
+    }
+    .header{
+        height: 230px;
+    }
+    .hamburger-menu__btn {
+        right: 9em;
+    }
+   
+    .company-links{
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .company-links h2{
+        margin-bottom: 1em;
+    }
+    .company-links h2::after{
+        display: none;
+    }
+    .company-links__block {
+        flex-direction: column;
+    }
+    .company-links__item{
+        margin-bottom: 1em;
+    }
+    .company-links__arrow {
+        margin-left: 2px;
+    }
 }
