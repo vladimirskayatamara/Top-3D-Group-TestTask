@@ -140,7 +140,7 @@ body{
     height: auto;
 }
 form.search-box{
-    width: 521px;
+    width: 522px;
     height: 46px;
     background: #FFFFFF;
     border: 1px solid #BDBDBD;
@@ -529,7 +529,46 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
     text-align: center;
   }
 
-
+@media screen and (max-width: 1369px){
+    .header, .main, .company-info, .video{
+        width: 100%;
+    }
+    .header-contacts, .header-navbar, .company-info, .header-menu, .header-menu-shop{
+        padding: 10px;
+    }
+    .company-info__recruitment{
+        width: 100%;
+    }
+    form.search-box input{
+        width: 84%;
+    }
+    .hamburger-menu__box, .hamburger-menu__shop-box{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .hamburger-menu__item, .hamburger-menu__product-item{
+        margin-bottom: 2em;
+    }
+    .basket-button{
+        width: 50px;
+        font-size: 0;
+    }
+    .company-info__image img{
+        width: 100%;
+        height: auto;
+    }
+    .company-links h2::after{
+        display: none;
+    }
+    .company-info__text{
+        margin-top: 2em;
+    }
+}
+@media screen and (max-width: 1067px){
+    form.search-box input {
+        width: 81%;
+    }
+}
 /**адаптив для планшетов от 650 до 992 **/
 @media screen and (max-width: 992px){
     body, .header, .main, .company-info, .video{
