@@ -8,6 +8,7 @@ var cssnano = require("gulp-cssnano"), // Минимизация CSS
     concat = require("gulp-concat"), // Объединение файлов - конкатенация
     uglify = require("gulp-uglify"), // Минимизация javascript
     rename = require("gulp-rename"); // Переименование файлов
+    ghPages = require('gulp-gh-pages') // Деплой на гитхаб
 /* --------------------------------------------------------
    ----------------- Таски ---------------------------
 ------------------------------------------------------------*/ 
@@ -60,7 +61,12 @@ gulp.task("watch", function() {
     gulp.watch("app/img/*.+(jpg|jpeg|png|gif)", gulp.series("imgs"));
 });
 
+// Задача деплоя на гитхаб
+gulp.task('deploy', function() {
+  return gulp.src('./dist/**/*')
+    .pipe(ghPages());
+});
 ///// Таски ///////////////////////////////////////
 
 // Запуск тасков по умолчанию
-gulp.task("default", gulp.parallel("html", "scripts", "minify-css", "imgs", "watch"));
+gulp.task("default", gulp.parallel("html", "scripts", "minify-css", "imgs", "watch", "deploy"));
