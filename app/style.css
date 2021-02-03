@@ -73,7 +73,7 @@ body{
     margin-right: 25px;
 }
 .header-contacts__btn::after{
-    content: url(img/arrow.svg);
+    content: url(/dist/images/arrow.svg);
     display: inline-block;
     margin-left: 5px;
     margin-right: 0; 
@@ -85,19 +85,19 @@ body{
 }
 .telegram-link::before{
     content: '';
-    background-image: url(img/tg-icon.svg);
+    background-image: url(/dist/images/tg-icon.svg);
     width: 16px;
     height: 14px;
 }
 .skype-link::before{
     content: '';
-    background-image: url(img/skype-icon.svg);
+    background-image: url(/dist/images/skype-icon.svg);
     width: 18px;
     height: 14px;
 }
 .call-link::before{
     content: '';
-    background-image: url(img/phone-icon.svg);
+    background-image: url(/dist/images/phone-icon.svg);
     width: 15.5px;
     height: 15.5px;
     margin-right: 0;
@@ -226,7 +226,7 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
     margin-left: 0;
   }
   .login-button::before, .login-button-mobile::before{
-      content:url(img/quit-icon.svg);
+      content:url(/dist/images/quit-icon.svg);
       position: relative;
       top: 7px;
   }
@@ -255,7 +255,7 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
       vertical-align: middle;
   }
   .basket-button span::before, .basket-button-mobile::before{
-    content: url(img/backet-icon.svg);
+    content: url(/dist/images/backet-icon.svg);
     position: relative;
     top: 5px;
     right: 4.33%;
@@ -304,7 +304,7 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
     margin-right: 0;
   }
   .hamburger-menu__product-item::after{
-    content: url(img/menu-arrow.svg);
+    content: url(/dist/images/menu-arrow.svg);
     display: inline-block;
     margin-left: 5px;
     margin-right: 0; 
@@ -419,7 +419,7 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
     margin-bottom: 50px;
 }
 .company-links h2::after{
-    content: url(img/h-line.svg);
+    content: url(/dist/images/h-line.svg);
     bottom: 287px;
     position: absolute;
     left: 34%;
@@ -517,11 +517,11 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
     justify-content: center;
 }
 .slider__control_left::before{
-    content: url(img/controls-arrow-left.svg);
+    content: url(/dist/images/controls-arrow-left.svg);
     position: absolute;
 }
 .slider__control_right::before{
-    content: url(img/controls-arrow-right.svg);
+    content: url(/dist/images/controls-arrow-right.svg);
 }
 .slider__item>div {
     line-height: 250px;
